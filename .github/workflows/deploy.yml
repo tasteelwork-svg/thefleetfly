@@ -32,8 +32,8 @@ jobs:
           REMOTE_PORT: 22
           REMOTE_USER: administrator
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
-          SOURCE: 'frontend/build/' 
-          TARGET: '/var/www/thefleetfly/frontend/build/'
+          SOURCE: 'frontend/dist/' 
+          TARGET: TARGET: '/var/www/thefleetfly/frontend/dist/'
 
       - name: Restart backend service on VPS
         uses: appleboy/ssh-action@v1.0.3
