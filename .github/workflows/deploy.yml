@@ -26,14 +26,13 @@ jobs:
 
       - name: Deploy to VPS using rsync
         uses: easingthemes/ssh-deploy@v5.1.0 
-
         with:
-          REMOTE_HOST: 155.117.43.204
-          REMOTE_PORT: 22
-          REMOTE_USER: administrator
+          REMOTE_HOST: 155.117.43.204  # <--- Check surrounding lines
+          REMOTE_PORT: 22              # <--- Check surrounding lines
+          REMOTE_USER: administrator   # <--- Line 36 is likely around here
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
           SOURCE: 'frontend/dist/' 
-          TARGET: TARGET: '/var/www/thefleetfly/frontend/dist/'
+          TARGET: '/var/www/thefleetfly/frontend/dist/'
 
       - name: Restart backend service on VPS
         uses: appleboy/ssh-action@v1.0.3
