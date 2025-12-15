@@ -25,7 +25,8 @@ jobs:
           npm run build
 
       - name: Deploy to VPS using rsync
-        uses: easingthemes/ssh-sync@v2
+        uses: easingthemes/ssh-deploy@v5.1.0 
+
         with:
           SSH_HOST: 155.117.43.204
           SSH_PORT: 22
