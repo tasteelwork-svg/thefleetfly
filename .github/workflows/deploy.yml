@@ -28,9 +28,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.0 
 
         with:
-          SSH_HOST: 155.117.43.204
-          SSH_PORT: 22
-          SSH_USER: administrator
+          REMOTE_HOST: 155.117.43.204
+          REMOTE_PORT: 22
+          REMOTE_USER: administrator
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
           SOURCE: 'frontend/build/' 
           TARGET: '/var/www/thefleetfly/frontend/build/'
